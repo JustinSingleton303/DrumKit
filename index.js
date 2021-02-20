@@ -1,5 +1,7 @@
 alert("script file linked");
+
 document.querySelector(".w").addEventListener("click", w);
-function w(){
-  document.querySelector(".w").innerHTML = "Hi!";
+
+function w(url){
+  new Audio(url).play();
 }
