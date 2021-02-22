@@ -1,4 +1,4 @@
-alert("script file linked");
+//alert("script file linked");
 
 var soundArray = ["sounds/snare.mp3", "sounds/kick-bass.mp3",
                   "sounds/tom-1.mp3", "sounds/tom-2.mp3",
