@@ -1,9 +1,11 @@
-//alert("script file linked");
+/*index.js for drumkit site
+  Author: Justin Singleton */
 
 var soundArray = ["sounds/snare.mp3", "sounds/kick-bass.mp3",
                   "sounds/tom-1.mp3", "sounds/tom-2.mp3",
                   "sounds/tom-3.mp3", "sounds/tom-4.mp3",
                   "sounds/crash.mp3"];
+                  
 /* upper index bound for drums */
 var numDrums = document.querySelectorAll(".drum").length;
 
