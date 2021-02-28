@@ -56,7 +56,7 @@ for (var i = 0; i < numDrums; i++) {
     var buttonInnerHtml = this.innerHTML;
     console.log(buttonInnerHtml);
     sound(soundArray[i]);
-    buttonAnimation(keyArray[i]);
+    buttonAnimation(buttonInnerHtml);
   });
 }
 
