@@ -20,24 +20,31 @@ document.addEventListener("keydown", function(event) {
   switch(aKey){
     case "w":
       sound(soundArray[0]);
+      buttonAnimation(keyArray[0]);
       break;
     case "a":
       sound(soundArray[1]);
+      buttonAnimation(keyArray[1]);
       break;
     case "s":
       sound(soundArray[2]);
+      buttonAnimation(keyArray[2]);
       break;
     case "d":
       sound(soundArray[3]);
+      buttonAnimation(keyArray[3]);
       break;
     case "j":
       sound(soundArray[4]);
+      buttonAnimation(keyArray[4]);
       break;
     case "k":
       sound(soundArray[5]);
+      buttonAnimation(keyArray[5]);
       break;
     case "l":
       sound(soundArray[6]);
+      buttonAnimation(keyArray[6]);
       break;
     default:
       break;
@@ -45,12 +52,19 @@ document.addEventListener("keydown", function(event) {
 });
 
 for (var i = 0; i < numDrums; i++) {
-  document.querySelectorAll(".drum").addEventListener("click", function() {
+  document.querySelectorAll(".drum")[i].addEventListener("click", function(event) {
+    var buttonInnerHtml = this.innerHTML;
+    console.log(buttonInnerHtml);
     sound(soundArray[i]);
-
+    buttonAnimation(keyArray[i]);
   });
 }
 
 function sound(url) {
   new Audio(url).play();
+}
+
+function buttonAnimation(currentKey){
+  var activeButton = document.querySelector("." + currentKey);
+  activeButton.classList.add("pressed");
 }
